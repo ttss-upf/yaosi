@@ -1,0 +1,14 @@
+python train.py \
+  -d_model 300 \
+  -n_layers 2 \
+  -heads 2 \
+  -batch_size 16 \
+  -vocab_size 18751 \
+  -dropout 0.01 \
+  -interval 100 \
+  -epochs 2 \
+  -lr 0.01 \
+  -no_cuda \
+  -max_length 128 \
+  -num_batches 34352 \
+  -lang eng \

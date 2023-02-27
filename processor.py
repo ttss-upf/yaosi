@@ -7,9 +7,9 @@ class Embedder(nn.Module):
     def __init__(self, vocab_size, d_model):
         super().__init__()
         self.d_model = d_model
-        self.embed = nn.Embedding(vocab_size, d_model)
+        self.vocab_size = vocab_size
+        self.embed = nn.Embedding(vocab_size, d_model,padding_idx=0)
     def forward(self, x):
-        print(self.embed(x))
         return self.embed(x)
     
 # Temporarily leave PositionalEncoding module here. Will be moved somewhere else.
